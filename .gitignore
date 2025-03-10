@@ -2,5 +2,6 @@
 .env.test
 volumes/
 shared/
+shared.bak/
 supabase/
 .DS_Store
