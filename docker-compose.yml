@@ -1,8 +1,8 @@
 volumes:
   n8n_storage:
-  ollama_storage:
+#  ollama_storage:
   qdrant_storage:
-  open-webui:
+#  open-webui:
   flowise:
   caddy-data:
   caddy-config:
@@ -59,16 +59,16 @@ services:
         - ~/.flowise:/root/.flowise
     entrypoint: /bin/sh -c "sleep 3; flowise start"
 
-  open-webui:
-    image: ghcr.io/open-webui/open-webui:main
-    restart: unless-stopped
-    container_name: open-webui
-    ports:
-      - "3000:8080"
-    extra_hosts:
-      - "host.docker.internal:host-gateway"
-    volumes:
-      - open-webui:/app/backend/data
+#  open-webui:
+#    image: ghcr.io/open-webui/open-webui:main
+#    restart: unless-stopped
+#    container_name: open-webui
+#    ports:
+#      - "3000:8080"
+#    extra_hosts:
+#      - "host.docker.internal:host-gateway"
+#    volumes:
+#      - open-webui:/app/backend/data
 
   n8n-import:
     <<: *service-n8n
