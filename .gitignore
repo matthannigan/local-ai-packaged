@@ -6,3 +6,7 @@ supabase/
 searxng/uwsgi.ini
 searxng/settings.yml
 .DS_Store
+*.*/._*
+*.*/._*.*
+._*
+._*.*
